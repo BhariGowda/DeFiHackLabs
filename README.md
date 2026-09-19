@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-860 incidents included.
+861 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -54,6 +54,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260916 PrimeFinance](#20260916-primefinance---permissionless-stale-signed-oracle-report-overwrite-drains-lending-pool)
+
 [20260915 RsETHSafeModule](#20260915-rsethsafemodule---nested-self-referential-multicall-authorization-bypass-drains-gnosis-safe-via-delegatecall)
 
 [20260915 BonfireSwap](#20260915-bonfireswap---missing-caller-authorization-lets-anyone-force-sell-any-approved-holders-tokens)
@@ -1816,6 +1818,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ---
 ### List of DeFi Hacks & POCs
+### 20260916 PrimeFinance - permissionless stale signed oracle report overwrite drains lending pool
+### Lost: ~425.5 WHYPE (~$33.4K) drained from the lending pool reserve
+```sh
+forge test --contracts src/test/2026-09/PrimeFinance_exp.sol -vvv
+```
+#### Contract
+[PrimeFinance_exp.sol](src/test/2026-09/PrimeFinance_exp.sol)
 ### 20260915 RsETHSafeModule - nested self-referential multicall authorization bypass drains Gnosis Safe via DELEGATECALL
 ### Lost: 2,900 aEthrsETH (~$7.8M gross; 2,882.37 rsETH / ~$7.73M net to the MEV frontrunner)
 ```sh
